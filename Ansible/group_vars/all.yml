@@ -1,0 +1,4 @@
+---
+ansible_user: ooadmin
+ansible_password: "n2!U6ABvy*VYJ"
+ansible_port: 5985

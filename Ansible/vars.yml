@@ -1,0 +1,5 @@
+db_user: oodbuser
+db_password: "n2!U6ABvy*VYJ"
+db_name: oodemo01
+pg_hba_conf: "/etc/postgresql/10/main/pg_hba.conf" 
+postgresql_conf: "/etc/postgresql/10/main/postgresql.conf"

@@ -1,0 +1,28 @@
+---
+- hosts: centralsrv
+  become: false
+  gather_facts: false
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: "Download OO"
+      async: 1800
+      poll: 10
+      ansible.windows.win_powershell:
+        script: C:\Temp\downloadOOfromOneDrive.ps1
+
+    - name: "Extract OO"
+      async: 1800
+      poll: 10
+      ansible.windows.win_powershell:
+        script: C:\Temp\extractOO.ps1
+        chdir: C:\Temp\
+    
+    - name: "Install OO"
+      async: 1800
+      poll: 10
+      ansible.windows.win_powershell:
+        script: C:\Temp\installOO.ps1
+        chdir: C:\Temp\
